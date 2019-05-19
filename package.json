@@ -4,7 +4,9 @@
   "description": "Git Stats",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:dev": "webpack -p --mode development",
+    "build:prod": "webpack -p --mode production",
+    "start": "PORT=8082 webpack-dev-server"
   },
   "keywords": [
     "git",
@@ -21,7 +23,9 @@
     "react-redux": "^7.0.3",
     "recharts": "^1.6.0",
     "redux": "^4.0.1",
-    "redux-saga": "^1.0.2"
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.0.2",
+    "typeface-roboto": "0.0.54"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
