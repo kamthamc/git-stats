@@ -6,13 +6,14 @@ import { RequestStatus } from "./Constants";
 
 const initialState = {
   repositories: [],
-  selectedRepoType: null,
+  selectedRepoType: 'all',
   error: null,
   requestStatus: RequestStatus.NONE,
 };
 
 export default function reducer(state = initialState, action) {
   return produce(state, (draft) => {
+    const { payload } = action;
     switch (action.type) {
       case ActionTypes.FETCH_REPOSITORIES_IN_PROGRESS:
         draft.repositories = [];

@@ -196,7 +196,7 @@ export const repos = [
     "repo": {
       "repoId": "42981ec4-2d70-4309-a080-e1b34083c031",
       "isPublic": true,
-      "name": "sunt",
+      "name": "sunt2",
       "lastUpdated": 1457243261310
     },
     "stats": [

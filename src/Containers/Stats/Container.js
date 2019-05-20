@@ -17,6 +17,7 @@ class Container extends React.PureComponent {
         groupedRepositorySummary={this.props.groupedRepositorySummary}
         repositorySummary={this.props.repositorySummary}
         selectedRepoType={this.props.selectedRepoType}
+        switchRepoType={this.props.switchRepoType}
       />
     );
   }

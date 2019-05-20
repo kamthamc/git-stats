@@ -10,7 +10,9 @@ function* fetchRepositoriesSaga() {
     const response = yield call(fetchRepositories);
     yield put({
       type: ActionTypes.FETCH_REPOSITORIES_COMPLETED,
-      payload: response.data,
+      payload: {
+        repositories: response.data
+      },
     });
   } catch (ex) {
     yield put({

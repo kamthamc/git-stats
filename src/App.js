@@ -10,13 +10,13 @@ import { StatsContainer } from './Containers';
 
 const darkTheme = createMuiTheme({
   palette: {
-    type: 'dark',
+    type: 'light',
   },
 });
 
 const App = () => (
   <ThemeProvider theme={darkTheme}>
-    <Container>
+    <Container maxWidth={false}>
       <CssBaseline />
       <Typography component="div">
         <StatsContainer />
