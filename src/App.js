@@ -3,13 +3,10 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider, styled } from '@material-ui/styles';
+import { ThemeProvider, makeStyles } from '@material-ui/styles';
+import './index.css';
 
 import { StatsContainer } from './Containers';
-
-const ContainerDiv = styled('div')({
-  height: '100%',
-});
 
 const darkTheme = createMuiTheme({
   palette: {
@@ -19,14 +16,12 @@ const darkTheme = createMuiTheme({
 
 const App = () => (
   <ThemeProvider theme={darkTheme}>
-    <ContainerDiv>
+    <Container>
       <CssBaseline />
-      <Container maxWidth={false} style={{ height: '100%', padding: 0 }}>
-        <Typography component="div" style={{ height: '100%' }}>
-          <StatsContainer />
-        </Typography>
-      </Container>
-    </ContainerDiv>
+      <Typography component="div">
+        <StatsContainer />
+      </Typography>
+    </Container>
   </ThemeProvider>
 );
 

@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -12,6 +13,5 @@ const mountNode = document.getElementById("app");
 ReactDOM.render((
   <Provider store={store}>
     <App />
-    <GlobalStyle />
   </Provider>
 ), mountNode);
